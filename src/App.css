@@ -13,7 +13,7 @@ body {
   color: var(--mainDark) !important;
 }
 .text-title {
-  font-family: "Permanent Marker", cursive;
+  font-family:  'Horev', serif, cursive;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
 }
@@ -42,4 +42,36 @@ body {
   cursor: pointer;
   font-size: 1.2rem;
   color: var(--mainYellow);
+}
+.title-size{
+  font-size:6rem;
+}
+.siteName{
+position: absolute;
+color: white;
+left: 5.7in;
+text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
 }
