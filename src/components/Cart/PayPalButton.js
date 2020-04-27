@@ -1,4 +1,4 @@
-import {storeProducts} from 'C:/Users/User/Desktop/react-Web/src/data.js'
+
 import React from "react";
 import PaypalExpressBtn from "react-paypal-express-checkout";
 
