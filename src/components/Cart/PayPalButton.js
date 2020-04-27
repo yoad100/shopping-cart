@@ -1,18 +1,23 @@
+import {storeProducts} from 'C:/Users/User/Desktop/react-Web/src/data.js'
 import React from "react";
 import PaypalExpressBtn from "react-paypal-express-checkout";
 
 export default class MyApp extends React.Component {
+  state={
+    products:storeProducts
+  }
   render() {
     const onSuccess = payment => {
       // Congratulation, it came here means everything's fine!
       console.log("The payment was succeeded!", payment);
-      alert('pursche was accepted thank you !')
+      alert('The payment was succeeded!')
       this.props.clearCart();
       this.props.history.push("/");
       // You can bind the "payment" object's value to your state or props or whatever here, please see below for sample returned data
     };
 
     const onCancel = data => {
+      console.log(this.props)
       // User pressed "cancel" or close Paypal's popup!
       console.log("The payment was cancelled!", data);
       // You can bind the "data" object's value to your state or props or whatever here, please see below for sample returned data
@@ -32,8 +37,8 @@ export default class MyApp extends React.Component {
     // Document on Paypal's currency code: https://developer.paypal.com/docs/classic/api/currency_codes/
 
     const client = {
-      sandbox: "AUTFEuF4Is6OsMgkzY7naYOGP3Xlxc5lmP_jtDvimpuyAH7hkVhG4m3_UUU1HilynQE_9qscFnhqTE0W",
-      production: "AUTFEuF4Is6OsMgkzY7naYOGP3Xlxc5lmP_jtDvimpuyAH7hkVhG4m3_UUU1HilynQE_9qscFnhqTE0W"
+      sandbox: process.env.REACT_APP_YIGAL_ID,
+      production: process.env.REACT_APP_PRODUCTION_ID,
     };
     // In order to get production's app-ID, you will have to send your app to Paypal for approval first
     // For sandbox app-ID (after logging into your developer account, please locate the "REST API apps" section, click "Create App"):

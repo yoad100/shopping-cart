@@ -16,11 +16,15 @@ https://www.iconfinder.com/Makoto_msk */}
         <ul className="navbar-nav align-items-center">
           <li className="nav-item ml-5">
             <Link to="/" className="nav-link">
-              products
+              חנות
             </Link>
           </li>
         </ul>
-        <h1 className="siteName">Yigal-Store</h1>
+        <Link to="/" className="mx-auto"> 
+        <div className="siteName ">
+        <h1 >Yigal-Store</h1>
+        </div>
+        </Link>
         <Link to="/cart" className="ml-auto">
           <ButtonContainer>
             <span className="mr-2">
@@ -35,9 +39,14 @@ https://www.iconfinder.com/Makoto_msk */}
 }
 
 const Nav = styled.nav`
-  background: var(--mainBlue);
+  background: var(--mainWhite);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   .nav-link {
-    color: var(--mainWhite) !important;
+    &: hover {
+         background: var(--mainWhite);
+         box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+       }
+    color: var(--mainDark) !important;
     font-size:1.3rem;
     text-transform:capitalize;
   }
