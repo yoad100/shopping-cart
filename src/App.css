@@ -12,6 +12,11 @@ body {
   background: var(--mainWhite) !important;
   color: var(--mainDark) !important;
 }
+.cart-total {
+  font-family: 'Suez One', serif;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
 .text-title {
   font-family: 'Suez One', serif;
   letter-spacing: 0.15rem;
