@@ -23,7 +23,7 @@ export default class Navbar extends Component {
         </ul>
         
         
-        <Link to="/" className=""> 
+        <Link to="/" > 
         <div >
         <img className="siteLogo" src="https://document-export.canva.com/DAD6u5dmh0U/49/thumbnail/0001-6282546788.png"></img>
         </div>
