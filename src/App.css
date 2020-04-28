@@ -22,7 +22,7 @@ body {
 flex-direction: row-reverse;
 height: 8rem;
 flex-wrap: wrap;
-width: 70rem;
+width: 100%;
 }
 .text-blue {
   color: var(--mainBlue);
