@@ -23,9 +23,9 @@ export default class Navbar extends Component {
         </ul>
         
         
-        <Link to="/" > 
+        <Link to="/" className="mx-auto" > 
         <div >
-        <img className="siteLogo" src="https://document-export.canva.com/DAD6u5dmh0U/49/thumbnail/0001-6282546788.png"></img>
+        <img className="nav-item siteLogo" src="https://document-export.canva.com/DAD6u5dmh0U/49/thumbnail/0001-6282546788.png"></img>
         </div>
         </Link>
         <Link to="/cart" className="ml-auto">

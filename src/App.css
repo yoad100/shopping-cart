@@ -51,21 +51,25 @@ width: 100%;
   color: var(--mainYellow);
 }
 .title-size{
-  font-size:400%;
+  font-size:5vw;
 }
 
 .siteLogo{
   position: relative;
   width: 5rem;
   height: 5rem;
-  margin-left: 3.1in;
-
+  margin-left: 6rem;
   } 
+  @media screen and (max-width: 600px) {
+    .siteLogo {
+      display: none;
+    }
+  }
 .puzzle-icon{
   right: 47rem;
-  width: 5rem;
-  height: 5rem;
-  margin-bottom: 1rem;
+  width: 5%;
+  height: 5vw;
+  margin-bottom: 0.5rem;
   
 }
 .NavStyle{
