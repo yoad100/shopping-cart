@@ -1,0 +1,10 @@
+.about{
+    margin-left: 14rem;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 50rem;
+    flex-wrap: wrap;
+}
