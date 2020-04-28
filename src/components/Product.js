@@ -3,8 +3,11 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { ProductConsumer } from "../context";
 export default class Product extends Component {
+  
+ 
   render() {
-    const { id, title, img, price, inCart } = this.props.product;
+    
+    const { id, title, img, price, inCart,quantity } = this.props.product;
     return (
       <ProductWrapper  className="col-9 mx-auto col-md-6 col-lg-3 my-3">
         <div className="card">
@@ -21,9 +24,16 @@ export default class Product extends Component {
                   <button
                     className="cart-btn"
                     disabled={inCart ? true : false}
-                    onClick={() => {
+                    onClick={() => {if(quantity>0)
+                      {
+                      
                       value.addToCart(id);
                       value.openModal(id);
+                      
+                      }
+                      else{
+                        alert("המוצר אזל עמכם הסליחה !")
+                      }
                     }}
                   >
                     {inCart ? (

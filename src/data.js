@@ -14,7 +14,7 @@ export const storeProducts = [
     inCart: false,
     count: 0,
     total: 0,
-    quantity:10
+    quantity:0
   },
   {
     id: 2,

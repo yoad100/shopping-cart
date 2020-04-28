@@ -4,6 +4,7 @@ import { ButtonContainer } from "./Button";
 import { Link } from "react-router-dom";
 export default class Details extends Component {
   render() {
+    
     return (
       <ProductConsumer>
         {value => {
@@ -13,7 +14,8 @@ export default class Details extends Component {
             info,
             price,
             title,
-            inCart
+            inCart,
+            quantity
           } = value.detailProduct;
 
           return (
@@ -50,9 +52,16 @@ export default class Details extends Component {
                     <ButtonContainer
                       cart
                       disabled={inCart ? true : false}
-                      onClick={() => {
+                      onClick={() => {if(quantity>0)
+                        {
+                        
                         value.addToCart(id);
                         value.openModal(id);
+                        
+                        }
+                        else{
+                          alert("המוצר אזל עמכם הסליחה !")
+                        }
                       }}
                     >
                       {inCart ? "in cart" : "add to cart"}
