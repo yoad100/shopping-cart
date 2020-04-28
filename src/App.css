@@ -16,6 +16,13 @@ body {
   font-family: 'Suez One', serif;
   letter-spacing: 0.15rem;
   text-transform: uppercase;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+flex-direction: row-reverse;
+height: 8rem;
+flex-wrap: wrap;
+width: 70rem;
 }
 .text-blue {
   color: var(--mainBlue);
@@ -56,8 +63,12 @@ body {
 .puzzle-icon{
   right: 47rem;
   width: 5rem;
+  height: 5rem;
+  margin-bottom: 1rem;
+  
 }
 .NavStyle{
   display: flex;
   align-items: center;
 }
+
