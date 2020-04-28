@@ -55,11 +55,12 @@ width: 70rem;
 }
 
 .siteLogo{
+  position: relative;
   width: 5rem;
   height: 5rem;
-  margin-left: 4in;
+  margin-left: 3.1in;
 
-  }
+  } 
 .puzzle-icon{
   right: 47rem;
   width: 5rem;

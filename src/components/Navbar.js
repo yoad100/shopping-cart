@@ -5,7 +5,7 @@ import { ButtonContainer } from "./Button";
 export default class Navbar extends Component {
   render() {
     return (
-      <Nav className="NavStyle">
+      <Nav className="navbar navbar-expand-sm  navbar-dark px-sm-5">
   
         <ul className="navbar-nav align-items-center">
           <li className="nav-item ml-5">
