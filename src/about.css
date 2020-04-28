@@ -1,4 +1,4 @@
-/* .about{
+.about{
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -6,4 +6,4 @@
     justify-content: center;
     width: 64%;
     flex-wrap: wrap;
-} */
+}
