@@ -9,7 +9,7 @@ import Default from "./components/Default";
 import Cart from "./components/Cart";
 import Modal from "./components/Modal";
 import about from "./about";
-import ContactForm from "./about";
+
 class App extends Component {
   render() {
     return (

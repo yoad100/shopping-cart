@@ -23,7 +23,7 @@ export default class Navbar extends Component {
         </ul>
         
         
-        <Link to="/" className="mx-auto" > 
+        <Link to="/" id="img-link" className="mx-auto" > 
         <div >
         <img className="nav-item siteLogo" src="https://document-export.canva.com/DAD6u5dmh0U/49/thumbnail/0001-6282546788.png"></img>
         </div>

@@ -61,11 +61,16 @@ width: 100%;
 
 .siteLogo{
   position: relative;
-  width: 5rem;
-  height: 5rem;
-  margin-left: 6rem;
+  width: 4rem;
+  height: 4rem;
   } 
-  @media screen and (max-width: 600px) {
+  #img-link{
+    position: absolute;
+    left: 50%;
+    margin-left: -2rem !important;  /* 50% of your logo width */
+    display: block;
+  }
+  @media screen and (max-width: 700px) {
     .siteLogo {
       display: none;
     }
