@@ -19,7 +19,7 @@ class ProductProvider extends Component {
   }
 
   setProducts = () => {
-    axios.get('https://yigal-store.herokuapp.com',)
+    axios.get('https://yigal-store.herokuapp.com/products',)
     .then(res => {const data=res.data
       let products = [];
       data.forEach(item => {
