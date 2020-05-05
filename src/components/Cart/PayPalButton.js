@@ -7,7 +7,7 @@ export default class MyApp extends React.Component {
   render() {
     const onSuccess = payment => {
       this.props.cart.map(item=>{
-        axios.put('http://localhost:5000/products/'+item._id,{quantity:item.quantity-item.count})
+        axios.put('https://yigal-store.herokuapp.com/products/'+item._id,{quantity:item.quantity-item.count})
         .then(res => {console.log(item)})})
       // Congratulation, it came here means everything's fine!
       console.log("The payment was succeeded!", payment);

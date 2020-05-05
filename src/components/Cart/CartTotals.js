@@ -33,7 +33,7 @@ export default class CartTotals extends Component {
     }
     
     
-    axios.post('http://localhost:5000/orders/add', order)
+    axios.post('https://yigal-store.herokuapp.com/orders/add', order)
   .then(res => console.log(res.data)).then(res=>{alert('הפרטים נשלחו!') 
   this.reset()})
 

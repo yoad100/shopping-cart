@@ -27,7 +27,7 @@ export default class SignUp extends Component {
 
     console.log(user);
 
-    axios.post('http://localhost:5000/users/add', user)
+    axios.post('https://yigal-store.herokuapp.com/users/add', user)
     .then(res => console.log(res.data)).then(res=>alert('Register Success!')).catch(error => {
       if (user.username.length < 1) {
         alert('invaild username')
