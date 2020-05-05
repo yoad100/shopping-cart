@@ -21,6 +21,7 @@ export default class Navbar extends Component {
             </Link>
           </li>
         </ul>
+    
         
         
         <Link to="/" id="img-link" className="mx-auto" > 
@@ -28,6 +29,7 @@ export default class Navbar extends Component {
         <img className="nav-item siteLogo" src="https://document-export.canva.com/DAD6u5dmh0U/49/thumbnail/0001-6282546788.png"></img>
         </div>
         </Link>
+        
         <Link to="/cart" className="ml-auto">
           <ButtonContainer>
             <span className="mr-2">
@@ -48,34 +50,21 @@ const Nav = styled.nav`
     &: hover {
          background: var(--mainWhite);
          box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-         border:2px outset black;
+         border:1px outset var(--mainBlue);
          padding:7px;
-         border-radius:2rem;
+         border-radius:0.3rem;
        }
     color: var(--mainDark) !important;
-    font-size:1.3rem;
+    font-size:2vw;
     text-transform:capitalize;
   }
+  @media (max-width: 700px){
+    .nav-link{
+      font-size:5vw;
+    }
   @media (max-width: 576px) {
     .navbar-nav {
       flex-direction: row !important;
 `;
 
-// const ButtonContainer = styled.button`
-//   text-transform: capitalize;
-// font - size: 1.4rem;
-// background: transparent;
-// border: 0.05rem solid var(--lightBlue);
-// border - radius: 0.5rem;
-// padding: 0.2rem 0.5rem;
-// outline - color: red;
-// cursor: pointer;
-// display: inline - block;
-// margin: 0.2rem 0.5rem 0.2rem 0;
-// transition: all 0.5s ease -in -out;
-//   &: hover {
-//   background: var(--lightBlue);
-//   color: var(--mainBlue);
-// }
-// `;
 

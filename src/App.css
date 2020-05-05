@@ -86,4 +86,30 @@ width: 100%;
   display: flex;
   align-items: center;
 }
-
+.Register-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+#cart-container{
+  display: flex;
+  justify-content: flex-end; 
+}
+#form-box{
+width:40vw;
+margin-bottom: 3rem;
+}
+@media (max-width: 700px){
+  #form-box{
+    width: 80vw;
+  }
+}
+#form-box h5{
+  font-size: 2vw;
+}
+@media (max-width: 700px){
+  #form-box h5{
+    font-size: 3.5vw;
+  }
+}

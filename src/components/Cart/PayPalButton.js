@@ -1,4 +1,4 @@
-
+import axios from 'axios'
 import React from "react";
 import PaypalExpressBtn from "react-paypal-express-checkout";
 
@@ -6,13 +6,19 @@ export default class MyApp extends React.Component {
 
   render() {
     const onSuccess = payment => {
+      this.props.cart.map(item=>{
+        axios.put('http://localhost:5000/products/'+item._id,{quantity:item.quantity-item.count})
+        .then(res => {console.log(item)})})
       // Congratulation, it came here means everything's fine!
       console.log("The payment was succeeded!", payment);
       alert('The payment was succeeded!')
       this.props.clearCart();
       this.props.history.push("/");
+      window.location.reload()
+      
       // You can bind the "payment" object's value to your state or props or whatever here, please see below for sample returned data
     };
+  
 
     const onCancel = data => {
       console.log(this.props)

@@ -9,7 +9,7 @@ export default class Details extends Component {
       <ProductConsumer>
         {value => {
           const {
-            id,
+            _id,
             img,
             info,
             price,
@@ -55,8 +55,8 @@ export default class Details extends Component {
                       onClick={() => {if(quantity>0)
                         {
                         
-                        value.addToCart(id);
-                        value.openModal(id);
+                        value.addToCart(_id);
+                        value.openModal(_id);
                         
                         }
                         else{

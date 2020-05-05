@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { storeProducts, detailProduct } from "./data";
+import axios from 'axios'
+import { detailProduct } from "./data";
 const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
@@ -18,32 +19,35 @@ class ProductProvider extends Component {
   }
 
   setProducts = () => {
-    let products = [];
-    storeProducts.forEach(item => {
-      const singleItem = { ...item };
-      products = [...products, singleItem];
-    });
-    this.setState(() => {
-      return { products };
-    }, this.checkCartItems);
+    axios.get('http://localhost:5000/products',)
+    .then(res => {const data=res.data
+      let products = [];
+      data.forEach(item => {
+        const singleItem = { ...item };
+        products = [...products, singleItem];
+      });
+      this.setState(() => {
+        return { products };
+      }, this.checkCartItems); })
   };
 
-  getItem = id => {
-    const product = this.state.products.find(item => item.id === id);
+  getItem = _id => {
+    const product = this.state.products.find(item => item._id === _id);
     return product;
   };
-  handleDetail = id => {
-    const product = this.getItem(id);
+  handleDetail = _id => {
+    const product = this.getItem(_id);
     this.setState(() => {
       return { detailProduct: product };
     });
   };
-  addToCart = id => {
+  addToCart = _id => {
     let tempProducts = [...this.state.products];
-    const index = tempProducts.indexOf(this.getItem(id));
+    const index = tempProducts.indexOf(this.getItem(_id));
     const product = tempProducts[index];
     product.inCart = true;
     product.count = 1;
+    console.log(product)
     const price = product.price;
     product.total = price;
 
@@ -55,8 +59,8 @@ class ProductProvider extends Component {
       };
     }, this.addTotals);
   };
-  openModal = id => {
-    const product = this.getItem(id);
+  openModal = _id => {
+    const product = this.getItem(_id);
     this.setState(() => {
       return { modalProduct: product, modalOpen: true };
     });
@@ -66,13 +70,15 @@ class ProductProvider extends Component {
       return { modalOpen: false };
     });
   };
-  increment = id => {
+  increment = _id => {
     let tempCart = [...this.state.cart];
     const selectedProduct = tempCart.find(item => {
-      return item.id === id;
+      return item._id === _id;
     });
     const index = tempCart.indexOf(selectedProduct);
     const product = tempCart[index];
+    console.log(product)
+    if(product.quantity > product.count){
     product.count = product.count + 1;
     product.total = product.count * product.price;
     this.setState(() => {
@@ -80,17 +86,21 @@ class ProductProvider extends Component {
         cart: [...tempCart]
       };
     }, this.addTotals);
+  }
+    else{
+      alert('הגעתם לכמות המוצר המקסימלית ')
+    }
   };
-  decrement = id => {
+  decrement = _id => {
     let tempCart = [...this.state.cart];
     const selectedProduct = tempCart.find(item => {
-      return item.id === id;
+      return item._id === _id;
     });
     const index = tempCart.indexOf(selectedProduct);
     const product = tempCart[index];
     product.count = product.count - 1;
     if (product.count === 0) {
-      this.removeItem(id);
+      this.removeItem(_id);
     } else {
       product.total = product.count * product.price;
       this.setState(() => {
@@ -131,18 +141,18 @@ class ProductProvider extends Component {
       }
     );
   };
-  removeItem = id => {
+  removeItem = _id => {
     let tempProducts = [...this.state.products];
     let tempCart = [...this.state.cart];
 
-    const index = tempProducts.indexOf(this.getItem(id));
+    const index = tempProducts.indexOf(this.getItem(_id));
     let removedProduct = tempProducts[index];
     removedProduct.inCart = false;
     removedProduct.count = 0;
     removedProduct.total = 0;
 
     tempCart = tempCart.filter(item => {
-      return item.id !== id;
+      return item._id !== _id;
     });
 
     this.setState(() => {

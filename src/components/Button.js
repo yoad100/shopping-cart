@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ButtonContainer = styled.button`
   text-transform: capitalize;
-  font-size: 1.4rem;
+  font-size: 2vw;
   background: transparent;
   border: 0.05rem solid var(--lightBlue);
   border-color: ${props =>
@@ -25,4 +25,8 @@ export const ButtonContainer = styled.button`
   &:focus {
     outline: none;
   }
+  @media (max-width: 700px){
+    {
+      font-size:4vw;
+    }
 `;

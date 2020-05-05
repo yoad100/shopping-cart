@@ -7,7 +7,7 @@ export default class Product extends Component {
  
   render() {
     
-    const { id, title, img, price, inCart,quantity } = this.props.product;
+    const { _id, title, img, price, inCart,quantity } = this.props.product;
     return (
       <ProductWrapper  className="col-9 mx-auto col-md-6 col-lg-3 my-3">
         <div className="card">
@@ -16,7 +16,7 @@ export default class Product extends Component {
               return (
                 <div
                   className="img-container p-5"
-                  onClick={() => value.handleDetail(id)}
+                  onClick={() => value.handleDetail(_id)}
                 >
                   <Link to="/details">
                     <img src={img} alt="" className="card-img-top" />
@@ -27,8 +27,8 @@ export default class Product extends Component {
                     onClick={() => {if(quantity>0)
                       {
                       
-                      value.addToCart(id);
-                      value.openModal(id);
+                      value.addToCart(_id);
+                      value.openModal(_id);
                       
                       }
                       else{

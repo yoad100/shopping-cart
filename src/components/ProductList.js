@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { ProductConsumer } from "../context";
 export default class ProductList extends Component {
   state = {
-    products: storeProducts
+    products:this.props.products
   };
   render() {
     return (
@@ -18,7 +18,7 @@ export default class ProductList extends Component {
               <ProductConsumer>
                 {value => {
                   return value.products.map(product => {
-                    return <Product key={product.id} product={product} />;
+                    return <Product key={product._id} product={product} />;
                   });
                 }}
               </ProductConsumer>
