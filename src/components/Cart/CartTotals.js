@@ -35,7 +35,8 @@ export default class CartTotals extends Component {
     
     axios.post('https://yigal-store.herokuapp.com/orders/add', order)
   .then(res => console.log(res.data)).then(res=>{alert('הפרטים נשלחו!') 
-  this.reset()})
+  this.reset()}).catch((error)=>(alert('היתה בעיה עם הפרטים אנא נסה שוב!'))
+  )
 
 }
 reset(){
