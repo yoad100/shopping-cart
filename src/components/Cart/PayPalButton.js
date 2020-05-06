@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React from "react";
 import PaypalExpressBtn from "react-paypal-express-checkout";
+require('dotenv').config();
 
 export default class MyApp extends React.Component {
 
@@ -34,7 +35,7 @@ export default class MyApp extends React.Component {
       // => sometimes it may take about 0.5 second for everything to get set, or for the button to appear
     };
 
-    let env = "sandbox"; // you can set here to 'production' for production
+    let env = "production"; // you can set here to 'production' for production
     let currency = "ILS"; // or you can set this value from your props or state
     //let total = 1;
     // same as above, this is the total amount (based on currency) to be paid by using Paypal express checkout
@@ -60,6 +61,11 @@ export default class MyApp extends React.Component {
         onError={onError}
         onSuccess={onSuccess}
         onCancel={onCancel}
+        style={{
+          color:'blue',
+          shape:'rect',
+          label:'checkout'
+        }}
       />
     );
   }

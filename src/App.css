@@ -1,3 +1,7 @@
+@font-face{
+  src: url(/fonts/GveretLevinAlefAlefAlef-Regular.woff);
+  font-family: nos;
+}
 :root {
   --mainBlue: #2a2a72;
   --lightBlue: #009ffd;
@@ -61,13 +65,13 @@ width: 100%;
 
 .siteLogo{
   position: relative;
-  width: 4rem;
-  height: 4rem;
+  width: 5.5rem;
+  height: 3.5rem;
   } 
   #img-link{
     position: absolute;
     left: 50%;
-    margin-left: -2rem !important;  /* 50% of your logo width */
+    margin-left: -3.2rem !important;  /* 50% of your logo width */
     display: block;
   }
   @media screen and (max-width: 700px) {
@@ -78,7 +82,7 @@ width: 100%;
 .puzzle-icon{
   right: 47rem;
   width: 5%;
-  height: 5vw;
+  height: 4.6vw;
   margin-bottom: 0.5rem;
   
 }
@@ -112,4 +116,8 @@ margin-bottom: 3rem;
   #form-box h5{
     font-size: 3.5vw;
   }
+}
+input.FormCheckBox{
+  width: 17px; 
+  height: 17px; 
 }

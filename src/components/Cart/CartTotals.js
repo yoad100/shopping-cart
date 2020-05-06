@@ -15,9 +15,14 @@ export default class CartTotals extends Component {
     address: '',
     products:'',
     phone: '',
-    infoCheck:false
+    infoCheck:false,
+    isChecked:false
   }
 }
+  toggleChange = () => {
+    this.setState({
+      isChecked: !this.state.isChecked,
+    })}
    handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
       
@@ -45,7 +50,8 @@ reset(){
     phone:'',
     email:'',
     products:'',
-    infoCheck:true
+    infoCheck:true,
+    isChecked:false
   })
 }  
   
@@ -94,7 +100,7 @@ reset(){
               
                
                 <Form onSubmit={this.onSubmit}  >
-                  {/* <h1>מלאו את הפרטים בבקשה</h1> */}
+                 
           <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>אימייל</Form.Label>
@@ -111,10 +117,21 @@ reset(){
           <Form.Label>מספר טלפון</Form.Label>
           <Form.Control placeholder="05*****" name="phone" onChange={this.handleChange} />
           </Form.Group>
+           <span>קראתי ואני מאשר את ה<a href="http://google.com/" target="_blank">תנאים</a>  </span> 
+           <input type="checkbox" checked={this.state.isChecked} onChange={this.toggleChange} className="FormCheckBox"></input>
+          <br/><br/>
+              {
+            (() => {
+                if (!this.state.isChecked)
+                  return <span></span>
+                else
+                  return <span>{!this.state.infoCheck?<Button variant="primary" type="submit" >
+                  Submit
+                  </Button>:''}</span>
+            })()
+          }          
           
-          {!this.state.infoCheck?<Button variant="primary" type="submit" >
-          Submit
-          </Button>:''}
+          
   
           </Form>   
 

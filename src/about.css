@@ -6,4 +6,21 @@
     justify-content: center;
     width: 64%;
     flex-wrap: wrap;
+    font-family: 'nos';
+}
+.about-box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.about-form{
+    width: 30vw;
+    
+}
+.about-form h1{
+    text-align: center;
+}
+.about-box button{
+    margin-left: 13vw;
+    
 }

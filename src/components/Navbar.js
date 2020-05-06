@@ -8,16 +8,16 @@ export default class Navbar extends Component {
       <Nav className="navbar navbar-expand-sm  navbar-dark px-sm-5">
   
         <ul className="navbar-nav align-items-center">
-          <li className="nav-item ml-5">
+          <li className="nav-item ml-4">
             <Link to="/" className="nav-link">
-              חנות
+            <span style={{fontFamily:'nos',paddingLeft:'0.8vw',color:'var(--mainBlue)'}}>חנות</span>
             </Link>
           </li>
         </ul>
         <ul className="navbar-nav align-items-center">
-          <li className="nav-item ml-5">
+          <li className="nav-item ml-4">
             <Link to="/about" className="nav-link">
-             אודותינו
+             <span style={{fontFamily:'nos',paddingLeft:'0.8vw',color:'var(--mainBlue)'}}>אודותינו</span>
             </Link>
           </li>
         </ul>
@@ -26,7 +26,7 @@ export default class Navbar extends Component {
         
         <Link to="/" id="img-link" className="mx-auto" > 
         <div >
-        <img className="nav-item siteLogo" src="https://document-export.canva.com/DAD6u5dmh0U/49/thumbnail/0001-6282546788.png"></img>
+        <img className="nav-item siteLogo" src='/img/Yigal-logo.jpg'></img>
         </div>
         </Link>
         
@@ -35,9 +35,10 @@ export default class Navbar extends Component {
             <span className="mr-2">
               <i className="fas fa-cart-plus " />
             </span>
-            my cart
+              <span style={{fontFamily:'nos'}}>עגלה</span> 
           </ButtonContainer>
         </Link>
+        
       </Nav>
     );
   }
