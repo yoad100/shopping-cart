@@ -13,17 +13,26 @@ export default class about extends Component {
                <p>אנחנו צוות מקצועי</p>
             </div>
             <div className="about-box">
-            <form className="about-form">
-                <h1>צור קשר</h1>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
- </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <form className="about-form" action="mailto:yoad.gadot@gmail.com" method="post" enctype="text/plain">
+  <div className="form-group">
+    <label className="label-form">כתובת מייל</label>
+    <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
   </div>
-  <button type="submit">Send</button>
+  <div class="form-group">
+    <label className="label-form">פנייה בנושא</label>
+    <select name="title" title="title" className="form-control" id="exampleFormControlSelect1">
+      <option>בעיה</option>
+      <option>בעיה</option>
+      <option>אחר</option>
+      <option>אחר</option>
+      <option>אחר</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label  className="label-form">הערות</label>
+    <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <button type="submit">Submit</button>
 </form>
             </div>
             </React.Fragment>

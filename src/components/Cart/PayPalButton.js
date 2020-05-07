@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React from "react";
 import PaypalExpressBtn from "react-paypal-express-checkout";
-require('dotenv').config();
+require('dotenv').config({ path: require('find-config')('.env') })
 
 export default class MyApp extends React.Component {
 
