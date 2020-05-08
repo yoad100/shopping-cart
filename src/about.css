@@ -14,16 +14,20 @@
     margin-bottom: 1rem;
 }
 .about-form{
-    width: 30vw;
+    width: 38vw;
     
 }
 .about-form h1{
     text-align: center;
 }
 .about-box button{
-    margin-left: 13vw;
+    margin-left: 16vw;
+    margin-top: 2vw;
     
 }
 .label-form{
-    padding-left: 22vw;
+    padding-left: 25rem;
+}
+#text-area-label{
+    padding-left: 27rem;
 }

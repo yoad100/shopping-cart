@@ -13,12 +13,12 @@ export default class about extends Component {
                <p>אנחנו צוות מקצועי</p>
             </div>
             <div className="about-box">
-            <form className="about-form" action="mailto:yoad.gadot@gmail.com" method="post" enctype="text/plain">
+            <form dir="rtl" className="about-form" action="mailto:yoad.gadot@gmail.com" method="post" enctype="text/plain">
   <div className="form-group">
     <label className="label-form">כתובת מייל</label>
     <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
   </div>
-  <div class="form-group">
+  <div className="form-group">
     <label className="label-form">פנייה בנושא</label>
     <select name="title" title="title" className="form-control" id="exampleFormControlSelect1">
       <option>בעיה</option>
@@ -28,11 +28,11 @@ export default class about extends Component {
       <option>אחר</option>
     </select>
   </div>
-  <div class="form-group">
-    <label  className="label-form">הערות</label>
+  <div className="form-group">
+    <label id="text-area-label"  className="label-form">הערות</label>
     <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-  <button type="submit">Submit</button>
+  <button type="submit" className="btn btn-primary">Submit</button>
 </form>
             </div>
             </React.Fragment>
