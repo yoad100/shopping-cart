@@ -26,8 +26,8 @@ class App extends Component {
           <Route exact path="/" component={ProductList} />
           <Route path='/users' component={SignUp}/>
           <Route path="/details" component={Details} />
-          <Route path="/cart" component={Cart} />
-          <Route path="/about" component={about}/>
+          <Route exact path="/cart" component={Cart} />
+          <Route exact path="/about" component={about}/>
           <Route component={Default} />
         </Switch>
         <Modal />

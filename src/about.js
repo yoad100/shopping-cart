@@ -32,7 +32,7 @@ export default class about extends Component {
     <label id="text-area-label"  className="label-form">הערות</label>
     <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-  <button type="submit" className="btn btn-primary">Submit</button>
+  <button id="btn-submit" type="submit" className="btn btn-primary">Submit</button>
 </form>
             </div>
             </React.Fragment>
