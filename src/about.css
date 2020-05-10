@@ -10,7 +10,7 @@
 }
 .about-form{
     width:40vh;
-    margin: auto;
+    margin: auto 0;
     margin-bottom: 1rem;
 }
 .about-form label{  
