@@ -37,8 +37,8 @@ export default class Product extends Component {
                     }}
                   >
                     {inCart ? (
-                      <p className="text-capitalize mb-0" disabled>
-                        in cart
+                      <p style={{fontFamily:'nos'}} className="text-capitalize mb-0" disabled>
+                        בעגלה
                       </p>
                     ) : (
                       <i className="fas fa-cart-plus" />

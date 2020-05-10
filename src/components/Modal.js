@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { ProductConsumer } from "../context";
 import { ButtonContainer } from "./Button";
 import { Link } from "react-router-dom";
+import { green100 } from "material-ui/styles/colors";
 export default class Modal extends Component {
   render() {
     return (
@@ -21,17 +22,17 @@ export default class Modal extends Component {
                       className="col-8 mx-auto col-md-6 col-lg-4 p-5 text-center text-capitalize"
                       id="modal"
                     >
-                      <h5>item added to cart</h5>
+                      <h5 style={{color:'green',fontWeight:'bold',fontFamily:'Suez One',letterSpacing:'1px'}}>המוצר נוסף לעגלה</h5>
                       <img src={img} className="img-fluid" alt="" />
                       <h5>{title}</h5>
-                      <h5 className="text-muted">price : ₪{price}</h5>
+                      <h5 className="text-muted">מחיר : ₪{price}</h5>
                       <Link to="/">
                         <ButtonContainer
                           onClick={() => {
                             closeModal();
                           }}
                         >
-                          Continue Shopping
+                          המשיכו בקניות
                         </ButtonContainer>
                       </Link>
                       <Link to="/cart">
@@ -41,7 +42,7 @@ export default class Modal extends Component {
                             closeModal();
                           }}
                         >
-                          Go To Cart
+                          גשו לעגלה
                         </ButtonContainer>
                       </Link>
                     </div>

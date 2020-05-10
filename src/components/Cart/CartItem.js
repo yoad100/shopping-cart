@@ -52,7 +52,7 @@ export default class CartItem extends Component {
         </div>
 
         <div className="col-10 mx-auto col-lg-2 ">
-          <strong>item total : ₪{total} </strong>
+          <strong>{'₪'+total} : סך הכל</strong>
         </div>
       </div>
     );

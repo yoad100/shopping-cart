@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ButtonContainer = styled.button`
   text-transform: capitalize;
   font-size: 2vw;
+  font-family:'nos';
   background: transparent;
   border: 0.05rem solid var(--lightBlue);
   border-color: ${props =>

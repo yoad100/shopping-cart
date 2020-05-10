@@ -82,23 +82,22 @@ reset(){
                       clearCart();
                     }}
                   >
-                    clear cart
+                    נקה עגלה
                   </button>
                 </Link>
-                
                 <h5>
-                  <span className="cart-total"> subtotal :</span>{" "}
-                  <strong>₪ {cartSubTotal} </strong>
+                  <span className="cart-total"> מחיר :</span>{" "}
+                  <strong> {'₪'+cartSubTotal} </strong>
                 </h5>
                 <h5>
-                  <span className="cart-total"> tax :</span>{" "}
-                  <strong>₪ {cartTax} </strong>
+                  <span className="cart-total"> מע"מ :</span>{" "}
+                  <strong> {'₪'+cartTax} </strong>
                 </h5>
                 <h5>
-                  <span className="cart-total"> total :</span>{" "}
-                  <strong>₪ {cartTotal} </strong>
+                  <span className="cart-total"> סך הכל: </span> {" "}
+                  <strong>  {'₪'+cartTotal} </strong>
                 </h5>
-              
+                    
                
                 <Form onSubmit={this.onSubmit}  >
                  

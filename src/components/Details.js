@@ -36,18 +36,18 @@ export default class Details extends Component {
                   <h1>model : {title}</h1>
                   <h4 className="text-blue">
                     <strong>
-                      price : <span>₪</span>
+                      מחיר : <span>₪</span>
                       {price}
                     </strong>
                   </h4>
                   <p className="text-capitalize font-weight-bold mt-3 mb-0">
-                    some info about product :
+                    :מידע על המוצר
                   </p>
                   <p className="text-muted lead">{info}</p>
                   {/* buttons */}
                   <div>
                     <Link to="/">
-                      <ButtonContainer>back to products</ButtonContainer>
+                      <ButtonContainer>חזרה למוצרים</ButtonContainer>
                     </Link>
                     <ButtonContainer
                       cart
@@ -64,7 +64,7 @@ export default class Details extends Component {
                         }
                       }}
                     >
-                      {inCart ? "in cart" : "add to cart"}
+                      {inCart ? "נמצא בעגלה" : "הוסף לעגלה"}
                     </ButtonContainer>
                   </div>
                 </div>
