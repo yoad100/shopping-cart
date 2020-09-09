@@ -15,10 +15,12 @@ export default class ProductList extends Component {
             <Title name=":המוצרים" title="שלנו" />
             <div className="row">
               <ProductConsumer>
-                {value => {
+                {value => {if(value){
                   return value.products.map(product => {
                     return <Product key={product._id} product={product} />;
-                  });
+                  })}
+                  else
+                  return <h1 style={{textAlign:'center',width:'100%'}}>Loading ...</h1>
                 }}
               </ProductConsumer>
             </div>
