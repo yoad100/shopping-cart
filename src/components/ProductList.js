@@ -8,9 +8,7 @@ export default class ProductList extends Component {
     products:this.props.products,
     showProducts:false
   };
-  componentDidMount(){
-    console.log(ProductList);
-  }
+  
   render() {
     return (
       <React.Fragment>
