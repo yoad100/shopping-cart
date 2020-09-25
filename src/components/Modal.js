@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { ProductConsumer } from "../context";
 import { ButtonContainer } from "./Button";
 import { Link } from "react-router-dom";
-import { green100 } from "material-ui/styles/colors";
+
 export default class Modal extends Component {
   render() {
     return (

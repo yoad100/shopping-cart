@@ -12,10 +12,12 @@ class ProductProvider extends Component {
     modalProduct: detailProduct,
     cartSubTotal: 0,
     cartTax: 0,
-    cartTotal: 0
+    cartTotal: 0,
+    showProducts:false
   };
   componentDidMount() {
     this.setProducts();
+    
   }
 
   setProducts = () => {
@@ -26,7 +28,9 @@ class ProductProvider extends Component {
         const singleItem = { ...item };
         products = [...products, singleItem];
       });
+      this.setState({showProducts:true})
       this.setState(() => {
+        console.log(this.state.showProducts);
         return { products };
       }, this.checkCartItems); })
   };

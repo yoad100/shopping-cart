@@ -5,23 +5,31 @@ import styled from "styled-components";
 import { ProductConsumer } from "../context";
 export default class ProductList extends Component {
   state = {
-    products:this.props.products
+    products:this.props.products,
+    showProducts:false
   };
+  componentDidMount(){
+    console.log(ProductList);
+  }
   render() {
     return (
       <React.Fragment>
         <ProductWrapper className="py-5">
           <div className="container">
             <Title name=":המוצרים" title="שלנו" />
-            <div className="row">
+            <div className="row" style={{justifyContent:'center'}}>
+              {/* {!this.state.showProducts?<h1>Loading...</h1>:''} */}
               <ProductConsumer>
-                {value => {if(value){
-                  return value.products.map(product => {
-                    return <Product key={product._id} product={product} />;
-                  })}
-                  else
-                  return <h1 style={{textAlign:'center',width:'100%'}}>Loading ...</h1>
+                {value=>{
+                  if(!value.showProducts)return <h1 >Loading...</h1>
+                  else return ''
                 }}
+              </ProductConsumer>
+              <ProductConsumer>
+                {value => { 
+                  return value.products.map(product => {
+                    return <Product  key={product._id} product={product} />;
+                  })}}
               </ProductConsumer>
             </div>
           </div>
